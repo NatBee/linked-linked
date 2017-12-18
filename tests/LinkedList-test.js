@@ -109,7 +109,7 @@ describe.only('LINKED LIST', () => {
     it('should attach nexts in sequential order', () => {
       list.push('duck');
       list.push('goose');
-      list.push('swan');
+      list.push('swan');git 
       list.push('southern screamer');
       expect(list.head.data).to.eq('duck');
       expect(list.head.next.data).to.eq('goose');
@@ -166,11 +166,11 @@ describe.only('LINKED LIST', () => {
         list.push("duck");
         list.push("goose");
         list.push("swan");
-// console.log(list)
+
         const output = list.pop();
         expect(output.data).to.eq('swan');
         expect(list.length).to.eq(2);
-// console.log(list)
+
         const output2 = list.pop();
         expect(output2.data).to.eq('goose');
         expect(output2.next).to.eq(null);
@@ -190,7 +190,7 @@ describe.only('LINKED LIST', () => {
       list.push('world');
     });
 
-    it.skip('should return the node if it is found', () => {
+    it('should return the node if it is found', () => {
       const result = list.find('hello');
 
       expect(result.data).to.eq('hello');

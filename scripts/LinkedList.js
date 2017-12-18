@@ -20,7 +20,7 @@ export default class LinkedList {
     } else {
       let removedNode = this.head;
       this.head = this.head.next;
-      // this.length--;
+      this.length--;
       return removedNode;
     }
   }
@@ -63,6 +63,19 @@ export default class LinkedList {
       previousNode.next = null;
       this.length--;
       return currentNode;
+  }
+
+  find(data) {
+    let foundNode;
+    let currNode = this.head;
+
+    while (currNode) {
+      if (currNode.data === data) {
+        foundNode = currNode;
+      } else {
+        currNode = currNode.next;
+      }
+    }
   }
 
 }
